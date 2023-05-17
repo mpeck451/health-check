@@ -5,8 +5,8 @@
 - Step 2: Verify Python v3.11.0 or newer and Pip (should come installed and accessible from CLI if you checked the box mentioned in step 1) v22.3 or newer are both installed.
 - Step 3: Clone health-check.py repository onto local machine. 'git clone https://github.com/mpeck451/health-check.git'
 - Step 4: Install Non Standard Library python modules
- - Step 4a: Install PyYAML v6.0 or newer with Pip. 'pip install pyyaml'
- - Step 4b: Install Requests v2.30.0 or newer with Pip. 'pip install requests'
+ + Step 4a: Install PyYAML v6.0 or newer with Pip. 'pip install pyyaml'
+ + Step 4b: Install Requests v2.30.0 or newer with Pip. 'pip install requests'
 - Ready to run!
 
 ## How to Run
@@ -18,8 +18,8 @@
 - Python v3.11.0 or newer
 - Pip v22.3 or newer
 - Non Standard Python Library Modules:
- - Requests v2.30.0 or newer
- - PyYAML v6.0 or newer
+ + Requests v2.30.0 or newer
+ + PyYAML v6.0 or newer
 
 MIT License
 
