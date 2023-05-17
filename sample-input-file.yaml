@@ -1,0 +1,31 @@
+- headers:
+    user-agent: fetch-synthetic-monitor
+  method: GET
+  name: fetch.com index page
+  url: https://fetch.com/
+- headers:
+    user-agent: fetch-synthetic-monitor
+  method: GET
+  name: fetch.com careers page
+  url: https://fetch.com/careers
+- body: '{"foo":"bar"}'
+  headers:
+    content-type: application/json
+    user-agent: fetch-synthetic-monitor
+  method: POST
+  name: fetch.com some post endpoint
+  url: https://fetch.com/some/post/endpoint
+- name: www.fetchrewards.com index page
+  url: https://www.fetchrewards.com/
+- name: resful-api.dev objects 7
+  url: https://api.restful-api.dev/objects
+  method: POST
+  body: '{
+   "name": "Apple MacBook Pro 16",
+   "data": {
+      "year": 2019,
+      "price": 1849.99,
+      "CPU model": "Intel Core i9",
+      "Hard disk size": "1 TB"
+   }
+}'
