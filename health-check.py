@@ -8,7 +8,7 @@ import yaml as y
 
 def initialize_constants():
     c = {
-        "check_interval": 3,
+        "check_interval": 15,
         "max_latency": dt.timedelta(seconds=0.5),
         "start_time": t.perf_counter(),
     }
