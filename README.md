@@ -1,25 +1,25 @@
 # health-check.py
 
 ## Build Instructions
-Step 1: Install Python v3.11.0 or newer. Make sure to check "Add Python 3.6 to PATH" checkbox.
-Step 2: Verify Python v3.11.0 or newer and Pip (should come installed and accessible from CLI if you checked the box mentioned in step 1) v22.3 or newer are both installed.
-Step 3: Clone health-check.py repository onto local machine. 'git clone https://github.com/mpeck451/health-check.git'
-Step 4: Install Non Standard Library python modules
-- Step 4a: Install PyYAML v6.0 or newer with Pip. 'pip install pyyaml'
-- Step 4b: Install Requests v2.30.0 or newer with Pip. 'pip install requests'
-Ready to run!
+- Step 1: Install Python v3.11.0 or newer. Make sure to check "Add Python 3.6 to PATH" checkbox.
+- Step 2: Verify Python v3.11.0 or newer and Pip (should come installed and accessible from CLI if you checked the box mentioned in step 1) v22.3 or newer are both installed.
+- Step 3: Clone health-check.py repository onto local machine. 'git clone https://github.com/mpeck451/health-check.git'
+- Step 4: Install Non Standard Library python modules
+ - Step 4a: Install PyYAML v6.0 or newer with Pip. 'pip install pyyaml'
+ - Step 4b: Install Requests v2.30.0 or newer with Pip. 'pip install requests'
+- Ready to run!
 
 ## How to Run
-Step 1: Run "health-check.py" script. YAML config file path required as input argument. ex: 'winpty python.exe "C:\Users\myUser\myFolder\health-check\sample-input-file.yaml"
-Step 2: Wait for script to make requests to endpoints every 15 seconds. First round of requests should initiate upon startup. Availability percentages will print to console.
-Step 3: Press "CTRL C" to end script.
+- Step 1: Run "health-check.py" script. YAML config file path required as input argument. ex: 'winpty python.exe "C:\Users\myUser\myFolder\health-check\sample-input-file.yaml"
+- Step 2: Wait for script to make requests to endpoints every 15 seconds. First round of requests should initiate upon startup. Availability percentages will print to console.
+- Step 3: Press "CTRL C" to end script.
 
 ## NOTES
-Python v3.11.0 or newer
-Pip v22.3 or newer
-Non Standard Python Library Modules:
-- requests v2.30.0 or newer
-- PyYAML v6.0 or newer
+- Python v3.11.0 or newer
+- Pip v22.3 or newer
+- Non Standard Python Library Modules:
+ - Requests v2.30.0 or newer
+ - PyYAML v6.0 or newer
 
 MIT License
 
