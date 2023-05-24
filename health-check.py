@@ -28,6 +28,8 @@ def read_yaml_config():
         endpoint["down_count"] = 0
         if "method" not in endpoint:
             endpoint["method"] = "GET"
+        endpoint["method"] = endpoint["method"].lower()
+        print(endpoint["method"])
     #print(config)
     return config
 
@@ -41,39 +43,13 @@ def check_site_availability(endpoint, max_latency):
         arguments["headers"] = endpoint["headers"]
     if "body" in endpoint:
         arguments["json"] = j.loads(endpoint["body"])
-    match endpoint["method"]:
-        case "GET":
-            with r.get(**arguments) as response:
-                res_code = response.status_code
-                res_time = response.elapsed
-                endpoint["request_count"] += 1
-        case "POST":
-            with r.post(**arguments) as response:
-                res_code = response.status_code
-                res_time = response.elapsed
-                endpoint["request_count"] += 1
-        case "PUT":
-            with r.put(**arguments) as response:
-                res_code = response.status_code
-                res_time = response.elapsed
-                endpoint["request_count"] += 1
-        case "DELETE":
-            with r.delete(**arguments) as response:
-                res_code = response.status_code
-                res_time = response.elapsed
-                endpoint["request_count"] += 1
-        case "HEAD":
-            with r.head(**arguments) as response:
-                res_code = response.status_code
-                res_time = response.elapsed
-                endpoint["request_count"] += 1
-        case "OPTIONS":
-            with r.options(**arguments) as response:
-                res_code = response.status_code
-                res_time = response.elapsed
-                endpoint["request_count"] += 1
-        case _:
-            print(f"ERROR: method {endpoint['method']} is an invalid method - {endpoint['url']}")
+    with getattr(r, endpoint["method"])(**arguments) as response:
+        res_code = response.status_code
+        res_time = response.elapsed
+        endpoint["request_count"] += 1
+    print(res_code)
+    print(res_time)
+    print(endpoint["request_count"])
     if res_time < max_latency and (res_code >= 200 and res_code <= 299):
         endpoint["up_count"] += 1
     else:
