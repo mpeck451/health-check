@@ -27,5 +27,12 @@
       "price": 1849.99,
       "CPU model": "Intel Core i9",
       "Hard disk size": "1 TB"
-   }
-}'
+    }
+  }'
+- name: mpeck-pc/api v1.0.0-alpha patients
+  url: http://mpeck-pc/api/v1.0.0-alpha/
+  method: GET
+- name: mpeck-pc/api v1.0.0-alpha patients Mason
+  url: http://mpeck-pc/api/v1.0.0-alpha/patients?firstName=Mason
+  method: GET
+  

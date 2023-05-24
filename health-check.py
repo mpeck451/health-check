@@ -29,8 +29,6 @@ def read_yaml_config():
         if "method" not in endpoint:
             endpoint["method"] = "GET"
         endpoint["method"] = endpoint["method"].lower()
-        print(endpoint["method"])
-    #print(config)
     return config
 
 def check_site_availability(endpoint, max_latency):
@@ -47,9 +45,6 @@ def check_site_availability(endpoint, max_latency):
         res_code = response.status_code
         res_time = response.elapsed
         endpoint["request_count"] += 1
-    print(res_code)
-    print(res_time)
-    print(endpoint["request_count"])
     if res_time < max_latency and (res_code >= 200 and res_code <= 299):
         endpoint["up_count"] += 1
     else:
